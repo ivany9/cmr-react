@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter , RouterProvider} from 'react-router-dom'
 import Layout from './components/Layout'
-import NuevoCLiente from './pages/NuevoCLiente'
-import Index from './pages/Index'
+import NuevoCLiente,{action as actionNuevoCliente} from './pages/NuevoCLiente'
+import Index,{loader as ClientesLoader} from './pages/Index'
 import React from 'react'
 
 
@@ -18,14 +18,16 @@ children:[
   {
 
     index:true,
-    element:<Index/>
+    element:<Index/>,
+    loader:ClientesLoader
   }
   ,
 
 {
 
   path:'/clientes/nuevo',
-  element:<NuevoCLiente/>  
+  element:<NuevoCLiente/>,  
+  action:actionNuevoCliente,
 }
 ]
 }
