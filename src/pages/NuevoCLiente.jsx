@@ -1,7 +1,7 @@
-import { useNavigate,Form,useActionData } from "react-router-dom"
+import { useNavigate,Form,useActionData,redirect } from "react-router-dom"
 import Formulario from "../components/Formulario"
 import Error  from "../components/Error"
-
+import { agregarCliente } from "../data/Clientes"
 
 
 
@@ -17,9 +17,6 @@ export async function action ({request}) {
        if(!regex.test(email)){
         errores.push('email no valido')   
        }
-             
-
-
       
      if(Object.values(data).includes('')){
          errores.push('Todos los campos son Obligatorios')
@@ -32,11 +29,11 @@ export async function action ({request}) {
        }
         
        
-       
+       await agregarCliente(data)
        
 
-return data
-     
+
+     return redirect('/')
 }
 
 

@@ -6,6 +6,7 @@ import Layout from './components/Layout'
 import NuevoCLiente,{action as actionNuevoCliente} from './pages/NuevoCLiente'
 import Index,{loader as ClientesLoader} from './pages/Index'
 import React from 'react'
+import ErrorPAge from './components/ErrorPage'
 
 
 
@@ -19,7 +20,8 @@ children:[
 
     index:true,
     element:<Index/>,
-    loader:ClientesLoader
+    loader:ClientesLoader,
+    errorElement:<ErrorPAge/>
   }
   ,
 
