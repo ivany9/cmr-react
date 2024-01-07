@@ -1,42 +1,35 @@
 {
-
-"clientes" :[ 
-
-  {
-      "id": 1,
-      "nombre": "Juan",
-      "telefono": 102013313,
-      "email": "juan@juan.com",
-      "empresa": "Codigo Con Juan"
-  },
-  {
-      "id": 2,
-      "nombre": "Karen",
-      "telefono": 138198313,
-      "email": "karen@juan.com",
-      "empresa": "Codigo Con Juan"
-  },
-  {
+  "clientes": [
+    {
       "id": 3,
       "nombre": "Josue",
       "telefono": 31983913,
       "email": "josue@juan.com",
       "empresa": "Codigo Con Juan"
-  },
-  {
-      "id": 4,
-     " nombre": "Miguel",
-      "telefono": 319381983,
-      "email": "miguel@juan.com",
-      "empresa": "Codigo Con Juan"
-  },
-  {
-      "id": 5,
-      "nombre": "Pedro",
-      "telefono": 1398198938,
+    },
+    {
+      "nombre": "Jorge",
+      "empresa": "Codigo Con Juan",
       "email": "pedro@juan.com",
-      "empresa": "Codigo Con Juan"
-  }
-]
-
-  }
+      "telefono": "1398198938",
+      "notas": "Rodriguez",
+      "id": 5
+    },
+    {
+      "nombre": "ivan rodriguez",
+      "empresa": "Partescol",
+      "email": "ivany9@hotmail.com",
+      "telefono": "2014824",
+      "notas": "multiples POLEAS",
+      "id": 6
+    },
+    {
+      "nombre": "fran",
+      "empresa": "ausdeveloper",
+      "email": "aus@empre.com",
+      "telefono": "2343345",
+      "notas": "computadores",
+      "id": 7
+    }
+  ]
+}

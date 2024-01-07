@@ -7,6 +7,10 @@ import NuevoCLiente,{action as actionNuevoCliente} from './pages/NuevoCLiente'
 import Index,{loader as ClientesLoader} from './pages/Index'
 import React from 'react'
 import ErrorPAge from './components/ErrorPage'
+import EditarCliente,{loader as EditarClienteLoader,action as actionEditarCliente} from './pages/EditarCliente'
+import {action as eliminarClienteAction} from './components/Cliente'
+
+
 
 
 
@@ -30,6 +34,21 @@ children:[
   path:'/clientes/nuevo',
   element:<NuevoCLiente/>,  
   action:actionNuevoCliente,
+  errorElement:<ErrorPAge/>
+},
+{
+  path:'/clientes/:clienteId/editar',
+  element:<EditarCliente/>,
+  loader:EditarClienteLoader,
+  action:actionEditarCliente,
+  errorElement:<ErrorPAge/>
+},
+{
+ path:'/clientes/:clienteId/eliminar',
+ action:eliminarClienteAction,
+ errorElement:<ErrorPAge/>
+
+
 }
 ]
 }
